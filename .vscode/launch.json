@@ -7,11 +7,12 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Run code.js",
+            "name": "node",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\code.js"
+            "program": "${relativeFile}",
+            "internalConsoleOptions": "openOnSessionStart"
         }
     ]
 }
