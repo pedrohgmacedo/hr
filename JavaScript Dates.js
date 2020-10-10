@@ -1,6 +1,7 @@
 // The days of the week are: "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
 function getDayName(dateString) {
     let dayName
+    let currentDay
     // Write your code here
     let weekdays = {
         "Sun": "Sunday",
@@ -11,8 +12,10 @@ function getDayName(dateString) {
         "Fri": "Friday",
         "Sat": "Saturday",
     }
-    let currentDay = new Date(dateString).toDateString().split(" ")[0]
+
+    currentDay = new Date(dateString).toDateString().split(" ")[0]
     dayName = weekdays[currentDay]
+
     return dayName
 }
 
