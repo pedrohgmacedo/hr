@@ -14,6 +14,8 @@ class Rectangle {
 
 class Square extends Rectangle {
     constructor(s) {
-        super(s, s);
+        super(s, s)
     }
 }
+
+let k = new Square(3)
