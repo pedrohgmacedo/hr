@@ -4,6 +4,7 @@ let s = "abcda";
 
 function regexVar() {
     let re = /^([aeiou]).+\1$/;
+    // /^(a|e|i|o|u).*\1$/
     return re;
 }
 
