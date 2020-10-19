@@ -8,6 +8,15 @@ const re = new RegExp('ab+c');;
 // regex literal:
 // /pattern/flags
 
+# character sets:
+
+[abcd] will match the set {a,b,c,d}
+[^abcd] anything but the set
+
+# alteration
+
+The symbol | matches one thing or the other. a|b either a or b
+
 // Character classes:
 // enclose within square brackets: matches any
 // [a-f] will match any lowercase a through f
@@ -28,7 +37,7 @@ const re = new RegExp('ab+c');;
 // grouping and back references:
 // (a) matches and remembers the match. It's called a capturing group
 // (?:a) matches but does not remember the match. It's called a non capturing group.
-// \n: n is a non positive integer.
+// \n: n is a non positive integer. It's a back reference to capturing group
 
 # Quantifiers:
 
@@ -42,7 +51,10 @@ a{n,m} matches at least n and at most m occurrences of preceding item a.
 
 # Assertions: 
 
-a(a?=b) matches a if a is followed by b.
+^ asserts at beggining of string
+& asserts the end
+()\1, where \1 matches the most recent of whats in capturing group 1 
+a(?=b) matches a if a is followed by b.
 a(?!b) matches a only if a is not followed by b
 
 # Methods: 
