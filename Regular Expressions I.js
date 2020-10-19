@@ -1,5 +1,5 @@
 // return a regexp object re that matches any string s, that begin and ends with the same vowel.
-
+// https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/
 let s = "abcda";
 
 function regexVar() {
