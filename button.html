@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css-file-path" type"text/css">
+    <style>
+        /* Write CSS styles here */
+    </style>
+</head>
+
+<body>
+    <script>
+        let clickMeButton = document.createElement('button')
+        clickMeButton.id = 'myButton'
+        clickMeButton.innerHTML = 'Click Me 2'
+        clickMeButton.style.background = 'green'
+        document.body.appendChild(clickMeButton)
+
+        let otherButton = document.getElementById('myButton')
+        clickMeButton.innerHTML = 'This is my new label text'
+    </script>
+    <button id="buttonIdentifier" class="buttonStyleClass">Click Me </button>
+</body>
+
+</html>
