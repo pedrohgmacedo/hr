@@ -8,39 +8,25 @@ function create(d, num) {
     b.innerHTML = `${num}`
     b.id = `btn${num}`
     b.className = "buttonClass"
-    b.addEventListener('click', rotate)
     d.appendChild(b)
 }
 
 
-function rotate(event) {
-    let btn1 = document.getElementById("btn1")
-    let btn2 = document.getElementById("btn2")
-    let btn3 = document.getElementById("btn3")
-    let btn4 = document.getElementById("btn4")
+function main2() {
+    main()
+
     let btn5 = document.getElementById("btn5")
-    let btn6 = document.getElementById("btn6")
-    let btn7 = document.getElementById("btn7")
-    let btn8 = document.getElementById("btn8")
-    let btn9 = document.getElementById("btn9")
 
-    let b1 = btn1.innerHTML
-    let b2 = btn2.innerHTML
-    let b3 = btn3.innerHTML
-    let b4 = btn4.innerHTML
-    let b7 = btn7.innerHTML
-    let b6 = btn6.innerHTML
-    let b8 = btn8.innerHTML
-    let b9 = btn9.innerHTML
+    let nums = [1, 2, 3, 6, 9, 8, 7, 4]
+    const ids = [1, 2, 3, 6, 9, 8, 7, 4]
 
-    btn1.innerHTML = b4
-    btn2.innerHTML = b1
-    btn3.innerHTML = b2
-    btn4.innerHTML = b7
-    btn7.innerHTML = b8
-    btn6.innerHTML = b3
-    btn8.innerHTML = b9
-    btn9.innerHTML = b6
+    btn5.onclick = function rotate() {
+        nums.unshift(nums.pop())
+
+        for (let i = 0; i <= 7; i++) {
+            document.getElementById("btn" + ids[i]).innerHTML = `${nums[i]}`
+        }
+    }
 }
 
 function main() {
@@ -54,4 +40,4 @@ function main() {
     }
 }
 
-main()
+main2()
