@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        let res = document.createElement("div")
+        let btns = document.createElement("div")
+        let btn0 = document.createElement("button")
+        let btn1 = document.createElement("button")
+        let btnClr = document.createElement("button")
+        let btnEql = document.createElement("button")
+        let btnSum = document.createElement("button")
+        let btnSub = document.createElement("button")
+        let btnMul = document.createElement("button")
+        let btnDiv = document.createElement("button")
+
+
+
+        res.id = "res"
+        btn0.id = "btn0"
+        btn1.id = "btn1"
+        btnClr.id = "btnClr"
+        btnEql.id = "btnEql"
+        btnSum.id = "btnSum"
+        btnSub.id = "btnSub"
+        btnMul.id = "btnMul"
+        btnDiv.id = "btnDiv"
+
+        btn0.innerHTML = "0"
+        btn1.innerHTML = "1"
+        btnClr.innerHTML = "C"
+        btnEql.innerHTML = "="
+        btnSum.innerHTML = "+"
+        btnSub.innerHTML = "-"
+        btnMul.innerHTML = "*"
+        btnDiv.innerHTML = "/";
+
+        [btn0, btn1, btnClr, btnEql, btnSum, btnSub, btnMul, btnDiv].forEach(el => btns.appendChild(el));
+
+        document.body.append(btns);
+
+        document.body.style.width = '33%';
+
+        res.style["background-color"] = 'lightgray';
+        res.style["font-size"] = '20px';
+        res.style.border = "solid";
+        res.style.height = "48px";
+
+        btn0.style["backgroud-color"] = "lightgreen";
+        btn0.style["color"] = "brown";
+
+        btn1.style["backgroud-color"] = "lightgreen";
+        btn1.style["color"] = "brown";
+
+        btnClr.style["backgroud-color"] = "darkgreen";
+        btnClr.style["color"] = "white";
+
+        btnEql.style["backgroud-color"] = "darkgreen";
+        btnEql.style["color"] = "white"
+
+        btnSum.style["backgroud-color"] = "black";
+        btnSum.style["color"] = "red"
+
+        btnSub.style["backgroud-color"] = "black";
+        btnSub.style["color"] = "red";
+
+        btnMul.style["backgroud-color"] = "black";
+        btnMul.style["color"] = "red";
+
+        btnDiv.style["backgroud-color"] = "black";
+        btnDiv.style["color"] = "red";
+
+        btns.style[width] = '25%';
+        btns.style[height] = '36px';
+        btns.style["font-size"] = '18px';
+        btns.style[margin] = '0px';
+        btns.style[float] = 'left';
+
+    </script>
+</body>
+
+</html>
