@@ -13,6 +13,13 @@
             ],
             "program": "${relativeFile}",
             "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "python",
+            "program": "${relativeFile}",
+            "console": "integratedTerminal"
         }
     ]
 }
