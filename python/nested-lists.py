@@ -10,7 +10,6 @@ names = [name for name, score in records]
 scores = [score for name, score in records]
 
 m0 = min(scores)
-
 m1 = min([score for score in scores if score > m0])
 
 mins = []
