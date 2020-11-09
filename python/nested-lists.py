@@ -10,6 +10,7 @@ names = [name for name, score in records]
 scores = [score for name, score in records]
 
 m0 = min(scores)
+
 m1 = min([score for score in scores if score > m0])
 
 mins = []
@@ -17,5 +18,5 @@ for i in range(n):
     if scores[i] == m1:
         mins.append(names[i])
 
-for name in sorted(names):
+for name in sorted(mins):
     print(name)
