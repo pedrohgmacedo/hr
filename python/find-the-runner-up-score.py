@@ -3,7 +3,10 @@ n = int(input())
 # iterating it a second time won't yield anything
 arr = list(map(int, input().split()))
 
-runnerUp = [item for item in list(arr) if item < max(list(arr))]
+z = max(arr)
+
+while max(arr) == z:
+    arr.remove(max(arr))
 
 # this is bad code
-print(max(runnerUp))
+print(max(arr))
