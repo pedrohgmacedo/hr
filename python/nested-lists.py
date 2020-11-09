@@ -1,6 +1,6 @@
-records = []
 n = int(input())
 
+records = []
 for _ in range(n):
     name = str(input())
     score = float(input())
