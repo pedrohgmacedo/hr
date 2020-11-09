@@ -1,18 +1,21 @@
-import numpy as np
+records = []
+n = int(input())
 
-records = np.array([]).reshape(0, 2)
-
-for _ in range(int(input())):
+for _ in range(n):
     name = str(input())
     score = float(input())
-    record = np.array([[name, score]])
-    records = np.r_[records, record]
+    records.append([name, score])
 
-m0 = min(records[:, 1])
+names = [name for name, score in records]
+scores = [score for name, score in records]
 
-m = np.array([x for x in records if x[1] > m0])
-m1 = min(m[:, 1])
+m0 = min(scores)
 
-for name, score in m:
-    if score == m1:
-        print(name)
+m1 = min([score for score in scores if score > m0])
+
+mins = []
+for i in range(n):
+    if scores[i] == m1:
+        mins.append(names[i])
+
+[print(name) for name in sorted(mins)]
