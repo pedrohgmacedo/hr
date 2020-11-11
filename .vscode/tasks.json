@@ -15,7 +15,7 @@
             }
         },
         {
-            "label": "pypy3",
+            "label": "pypy",
             "type": "shell",
             "command": "pypy3",
             "args": [
