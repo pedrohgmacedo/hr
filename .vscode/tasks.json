@@ -13,6 +13,17 @@
             "options": {
                 "cwd": "${workspaceFolder}"
             }
-        }
+        },
+        {
+            "label": "pypy3",
+            "type": "shell",
+            "command": "pypy3",
+            "args": [
+                "${relativeFile}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
     ]
 }
