@@ -2,18 +2,16 @@ import string
 
 
 def swap_case(s):
-    swapped = []
-    for el in s:
-        if el.isupper():
-            swapped.append(el.lower())
-        elif el.islower():
-            swapped.append(el.upper())
+    swapped = ""
+    for letter in s:
+        if letter == letter.upper():
+            swapped += letter.lower()
         else:
-            swapped.append(el)
-    return "".join(swapped)
+            swapped += letter.upper()
+    return swapped
 
 
 s = input()
 result = swap_case(s)
-result = s.swapcase()
+# result = s.swapcase()
 print(result)
