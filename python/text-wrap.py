@@ -1,6 +1,3 @@
-import textwrap
-
-
 def wrap(string, max_width):
     n = int(len(string)/max_width)+1
 
