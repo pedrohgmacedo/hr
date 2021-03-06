@@ -21,9 +21,9 @@
 #     l = int((m-3*p)/2)
 #     print(l*dash+(p)*dick+l*dash)
 
-N, M = map(int, raw_input().split())
-for i in xrange(1, N, 2):
-    print(str('.|.')*i).center(M, '-')
-print str('WELCOME').center(M, '-')
-for i in xrange(N-2, -1, -2):
-    print(str('.|.')*i).center(M, '-')
+N, M = map(int, input().split())
+for i in range(1, N, 2):
+    print((str('.|.')*i).center(M, '-'))
+print(str('WELCOME').center(M, '-'))
+for i in range(N-2, -1, -2):
+    print((str('.|.')*i).center(M, '-'))
