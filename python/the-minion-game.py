@@ -24,7 +24,7 @@
 #         print('Draw')
 
 # :(
-def minion_game(string):
+def minion_game(s):
     vowels = 'AEIOU'
 
     kevin = 0
@@ -36,9 +36,9 @@ def minion_game(string):
             stuart += (len(s)-i)
 
     if kevin > stuart:
-        print("Kevin ", kevin)
+        print("Kevin", kevin)
     elif kevin < stuart:
-        print("Stuart ", stuart)
+        print("Stuart", stuart)
     else:
         print("Draw")
 
