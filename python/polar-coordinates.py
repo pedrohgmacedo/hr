@@ -1,12 +1,6 @@
-import re
 import cmath
 
-inpt = str(input())
-_, x, y, *_ = re.split(r"(\S+)([\+\-]\S+)[j|i]", inpt)
+z = complex(input())
+z = cmath.polar(z)
 
-x = float(x)
-y = float(y)
-z = complex(x, y)
-
-print(abs(z))
-print(cmath.phase(z))
+print(*z, sep="\n")
