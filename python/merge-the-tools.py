@@ -2,12 +2,23 @@ from collections import OrderedDict
 
 
 def merge_the_tools(string, k):
-    l = len(string)
-    for i in range(0, l, k):
-        # a dict has unique keys
-        print(''.join(OrderedDict.fromkeys(string[i:i + k])))
+    n = len(string)
+    n_sub = int(n/k)
+
+    for i in range(n_sub):
+
+        # subsegment string
+        t = string[i*k: (i+1)*k]
+
+        # distinct subsequence
+        ds = ""
+
+        for c in t:
+            if c not in ds:
+                ds += c
+        print(ds)
 
 
 if __name__ == '__main__':
     string, k = "AABCAAADA", 3
-    merge_the_tools(string, k)
+merge_the_tools(string, k)
