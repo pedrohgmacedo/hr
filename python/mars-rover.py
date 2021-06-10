@@ -1,11 +1,12 @@
-
 import math
 
 
 class Rover(object):
-    def __init__(self, x, y, direction):
+    def __init__(self, x, y, grid_x, grid_y, direction):
         self.x = x
         self.y = y
+        self.grid_x = grid_x
+        self.grid_y = grid_y
         self.ang = 0
         self.direction = direction
         self.rad = {"E": 0, "N": math.pi/2, "W": math.pi, "S": 3*math.pi/2}
@@ -23,6 +24,14 @@ class Rover(object):
         if cmd == "M":
             self.x = round(self.x + math.cos(self.ang))
             self.y = round(self.y + math.sin(self.ang))
+        if self.x >= self.grid_x:
+            self.x = self.grid_x
+        if self.y >= self.grid_y:
+            self.y = self.grid_y
+        if self.x <= 0:
+            self.x = 0
+        if self.y <= 0:
+            self.y = 0
         self.updateAngleFromDirection()
         return self
 
@@ -34,15 +43,11 @@ class Rover(object):
         self.direction = self.card[(self.ang) % (2*math.pi)]
         return self
 
-    def printState(self):
-        print(self.x)
-        print(self.y)
-        print(math.degrees(self.ang))
-        print(self.direction)
+    def chainCmds(self, cmds):
+        for char in cmds:
+            self.updatePos(char)
+        return (self.x, self.y, self.direction)
 
 
-Rv = Rover(0, 0, "S")
-Rv.printState()
-Rv.updatePos("L")
-Rv.updatePos("M")
-Rv.printState()
+# initial position is 0,0 on grid size 5 by 5, rover is facing north
+print(Rover(0, 0, 5, 5, "N").chainCmds("MML"))
