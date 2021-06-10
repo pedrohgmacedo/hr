@@ -1,6 +1,3 @@
-from collections import OrderedDict
-
-
 def merge_the_tools(string, k):
     n = len(string)
     n_sub = int(n/k)
