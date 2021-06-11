@@ -18,6 +18,7 @@ def merge_the_tools(string, k):
             if c not in ds:
                 ds += c
         l.append([ds])
+        print(ds)
     return l
 
 
@@ -28,13 +29,14 @@ def merge_the_tools_dict(string, k):
 
     for i in range(n_sub):
         t = string[i*k:(i+1)*k]
-
-        l.append([''.join(OrderedDict.fromkeys(t).keys())])
+        ds = ''.join(OrderedDict.fromkeys(t).keys())
+        l.append([ds])
+        print(ds)
     return l
 
 
 string, k = ''.join([random.choice(string.ascii_uppercase)
-                     for i in range(100*1000000)]), 100
+                     for i in range(100*10000)]), 100
 t = time.time()
 a = merge_the_tools(string, k)
 elapsed = time.time() - t
