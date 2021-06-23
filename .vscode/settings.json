@@ -1,3 +1,4 @@
 {
+    "tasksStatusbar.taskLabelFilter": "infra|start|build-ci-dev$|python|test|^pypy",
     "python.pythonPath": "C:\\Users\\phg\\scoop\\apps\\python\\current\\python.exe"
 }

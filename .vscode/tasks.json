@@ -16,7 +16,7 @@
             }
         },
         {
-            "label": "test-python",
+            "label": "py-test",
             "type": "shell",
             "command": "cat test.txt | python ${relativeFile}",
             "options": {
