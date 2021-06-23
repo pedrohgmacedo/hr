@@ -15,5 +15,13 @@
                 "cwd": "${workspaceFolder}"
             }
         },
+        {
+            "label": "test-python",
+            "type": "shell",
+            "command": "cat test.txt | python ${relativeFile}",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
     ]
 }
