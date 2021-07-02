@@ -17,7 +17,7 @@ import sys
 def rotLeft(a, d):
     n = len(a)
     for i in range(n):
-        el = a[(i-d) % n]
+        el = a[(i-+d) % n]
         # print(el, end=" ")
         print((i-d) % n)
     return 0
