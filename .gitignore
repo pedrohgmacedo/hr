@@ -1,3 +1,4 @@
 node_modules/**
 .vscode/.ropeproject/**
 python/repl.py
+test/**
