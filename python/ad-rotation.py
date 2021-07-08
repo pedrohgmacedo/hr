@@ -16,7 +16,6 @@ import sys
 
 def changeAds(base10):
     n = math.ceil(math.log2(base10))
-    print(n)
     mask = 2**n-1
     if mask == base10-1:
         return mask
